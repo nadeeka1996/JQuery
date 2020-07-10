@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>jQuery</title>
+</head>
+<body>
+	<style>
+		h1{
+			color: red;
+		}
+		button{
+			color: green;
+		}
+	</style>
+
+	<center><div id= "readyDemo"></div></center>
+	<h1>Hello !!!</h1>
+	<p></p>
+	
+	<!--<button id = " bb1">If you want know about me , Click me</button>-->
+
+
+
+	<h2> This is my Q & A from about jQuery</h2>
+	<div id = "container">
+		<p id="quection">1. Which of the following type of variable is visible everywhere in your JavaScript code?</p>
+		<ul>
+			<li>A . global variable</li>
+			<li>B. local variable</li>
+			<li>C. Both of the above</li>
+			<li>D. None of the above</li>
+		</ul>
+
+		Answer is(type a letter of answer) : 
+		<input type="text" id = "answer-box" name="">
+		
+		<p id= "result"></p>
+		<p id= "answer"></p>
+
+		<p id="quection">2. Using ________ function, we can hold or release the execution of jQuery’s ready event.</p>
+		<ul>
+			<li>A. jQuery.holdReady()</li>
+			<li>B. jQuery.ready()</li>
+			<li>C. jQuery.hold()</li>
+			<li>D. jQuery.holdready()</li>
+		</ul>
+
+		Answer is(type a letter of answer) : 
+		<input type="text" id = "answer-box1" name="">
+		
+		<p id= "result1"></p>
+		<p id= "answer1"></p>
+		<button>Submit</button>
+		
+		
+	</div>
+
+	
+
+
+
+
+	<script src="./jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#readyDemo").text("I hope to improve my jQuery knowledge creating this simple from").css('color','red').css('font-weight',900).css('font-size',30).fadeIn(2000);
+			$("h1").css('color','blue')
+
+			/*$("#bb1").click(function(){
+				$('h1').text('I am Nadeeka Priyadarshani').css('color','green');	
+			});
+			$("#bb1").click(function(){
+				$('p').text('I am a undergraduate in University of Ruhuna').css('color','green');
+
+			});*/
+
+
+
+			$("button").click(function(){
+				var answer = $("#answer-box").val();
+				if(answer == "A"){
+					$('#result').text("Your answer is currect! ");
+				}
+				else
+				{
+					$('#result').html('<span style="color:red">Your answer is incurrect</span>');
+					$('#answer').text("Currect answer is A");
+				}
+
+				var answer1 = $("#answer-box1").val();
+				if(answer1 == "D"){
+					$('#result1').text("Your answer is currect! ");
+				}
+				else
+				{
+					
+					$('#result1').html('<span style="color:red">Your answer is incurrect</span>');
+					$('#answer1').text("Currect answer is D");
+				}
+
+			});
+			
+		});
+		</script>
+
+	<style>
+		body{
+			background-color: #CEF6F5;
+		}
+	</style>	
+</body>
+</html>
